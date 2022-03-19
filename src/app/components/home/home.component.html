@@ -1,0 +1,41 @@
+<div class="intro-container">
+    <p>RECIPES</p>
+</div>
+
+<p id="helper">Most popular recipes</p>
+
+<div class="filters">
+    <div class="tags">
+       
+        <div class="tag">
+            <button value="dessert" [ngClass]="isDessertActivated==true ? 'activated': ''" (click)="TriggerTag($event)">dessert</button>
+        </div>
+        <div class="tag">
+            <button value="lunch" [ngClass]="isLunchActivated==true ? 'activated': ''"  (click)="TriggerTag($event)">lunch</button>
+        </div>
+    
+    </div>
+    <input type="text" #inputVal class="searchBar" placeholder="Search for recipes" />
+
+</div>
+
+
+
+<div class="food-container"> 
+    <div class="food" *ngFor="let recipes of data">
+        <div class="img">
+            <img alt="thumbnail" *ngIf="recipes.image" src="{{recipes.image}}">
+            <img alt="thumbnail" *ngIf="!recipes.image" src="https://thumbs.dreamstime.com/b/no-image-available-icon-flat-vector-no-image-available-icon-flat-vector-illustration-132482953.jpg">
+        </div>
+        <div class="info">
+            <div class="title">
+                <p>{{recipes.title}}</p> 
+                
+            </div>
+
+            <div class="show-details">
+                <button (click)="getDetails(recipes.id)">Show details</button>
+            </div>
+        </div>
+    </div>
+</div>

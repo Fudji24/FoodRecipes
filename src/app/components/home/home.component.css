@@ -1,0 +1,155 @@
+.intro-container{
+    background-image: url(https://s3.envato.com/files/266441969/17_IMG_3082-3.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100%;
+    height: 80vh;
+    position: relative;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+    .intro-container p{
+        font-size: 5rem;
+        font-weight: bold;
+    }
+.filters{
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 10px 0px 10px;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+    .filters .tags{
+        display: flex;
+    }
+        .filters .tags .tag{
+            width: 65px;
+            border-radius: 5px;
+        }
+            .filters .tags .tag button{
+                background: #fcfcfc;
+                box-shadow: 0px 0px 6px 2px #afafaf;
+                border: 0;
+                border-radius: 5px;
+                font-size: .8rem;
+                width: 100%;
+                color: rgba(0,0,0, .5);
+                cursor: pointer;
+                transition: all .3s ease-out;
+            }
+            .filters .tags .tag button:hover{
+                box-shadow: 0px 0px 6px 2px #352f27;
+               color: rgba(0,0,0, 1);
+               transition: all .3s ease-in;
+            }
+            .filters .tags .tag .activated{
+                background-color: #bd5a5a;
+                color: #fcfcfc;
+            }
+        
+        .filters .tags .tag:nth-child(2){
+            margin-left: 10px;
+        }
+    .filters .searchBar{
+        box-shadow: 0px 0px 6px 2px #afafaf;
+        border: 0px;
+        outline: none;
+        border-radius: 5px;
+    }
+
+#helper{
+    text-align: center;
+    font-size: 2rem;
+    color: #352f27;
+}
+
+.food-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 225px);
+    padding: 10px;
+    justify-content: space-evenly;
+    padding-bottom: 70px;
+}
+
+    .food-container .food{
+        width: 165px;
+        height: 230px;
+        background-color: #ecf1eb;
+        border: 1px solid #352f27;
+        border-radius: 5px;
+        padding: 5px;
+        margin-top: 35px;
+        cursor: pointer;
+        text-shadow: 0px 0px 0px #525252;
+        transition: text-shadow .5s;
+    }
+    .food-container .food:hover .title{
+        text-shadow: 0px 0px 1px #525252;
+        transition: text-shadow .5s;
+    }
+        .food-container .food .img{
+            width: 100%;
+            height: 45%;
+            overflow: hidden;
+            border-radius: 5px;
+        }
+            .food-container .food .img img{
+                width: 100%;
+                height: 100%;
+                border-radius: 5px;
+                object-fit: cover;
+                object-position: center;
+                transition: all .5s;
+                
+            }
+            .food-container .food .img:hover img{
+                transform: scale(1.1);
+                transition: all .5s;
+            }
+    
+    .food-container .food .info{
+        height: 45%;
+        position: relative;
+    }
+        .food-container .food .info .title{
+            text-align: center;
+        }
+        .food-container .food .info .show-details{
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            text-align: center;
+            font-size: .9rem;
+        }
+
+        .food-container .food .info .show-details button{
+            border: 0px;
+            outline: none;
+            background: #352f27;
+            color: #ecf1eb;
+            width: 100px;
+            height: 30px;
+            border-radius: 5px;
+            box-shadow: 0px 0px 3px 2px grey;
+            cursor: pointer;
+            transition: all .5s ease-out;
+        }
+
+        .food-container .food .info .show-details button:hover{
+            background: #ecf1eb;
+            color: #352f27;
+            transition: all .3s ease-in;
+        }
+
+
+@media only screen and (max-width: 600px) {
+    .intro-container{
+        background-position: inherit;
+    }
+}

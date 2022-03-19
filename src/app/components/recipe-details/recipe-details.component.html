@@ -1,0 +1,33 @@
+<div class="backToList">
+    <button (click)="backToList()"><i class='fa fa-angle-left'></i> Back</button>
+</div>
+<p id="title">{{current.title}}</p>
+<div class="score">
+    <p id="score">{{current.spoonacularScore}}</p>
+</div>
+
+
+<div class="short-info">
+    <div class="time-servings">
+        <p id="time"><i class="fa fa-clock-o"></i> {{current.readyInMinutes}}</p>
+        <p id="servings"><i class="fa fa-group"></i> {{current.servings}}</p>
+    </div>
+    <div class="types">
+        <p id="types">types: <strong>{{current.dishTypes}}</strong></p>
+    </div>
+</div>
+<div class="main-recipe">
+    <div class="main-recipe-info">
+        <img src="{{current.image}}">
+            <p id="summary" [innerHTML]="current.summary"></p>
+        
+    </div>
+</div>
+
+
+
+<p id="instructionHelper">Instructions:</p>
+<p id="instructions">{{current.instructions}}</p>
+
+
+
