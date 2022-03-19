@@ -13,7 +13,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 ## Installation
 #### API key
 Sign up into https://spoonacular.com/food-api to get your free API key.
-Once you get API key copy it, navigate to /src/app/services/http.services.ts and change it with "YOUR_API_KEY" *property name: apiKey*
+Once you get API key copy it, navigate to /src/environments/environment.prod.ts and /src/environments/environment.ts and change it with "YOUR_API_KEY" *property name: apiKey*
 
 #### Dependencies
 In terminal navigate to the project root folder and run command *npm install*
